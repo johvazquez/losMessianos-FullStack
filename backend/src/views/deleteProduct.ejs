@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>   
+        <%- include ('partials/head', {style: 'deleteProductStyles' , title: 'Eliminar actividad' }) %>
+    </head>
+<body>
+
+    <%- include ('partials/header') %>
+        <main>
+
+            <form action="/admin/products/<%=product.id %>?_method=DELETE" method="POST" class="create-form">
+                <div class="caja1">
+                    <div class="h2">
+                        <h2>Formulario para eliminar actividad </h2>
+                    </div>                   
+                    <div class="form-control">
+                        <label>Nombre de la actividad: <%= product.name %></label>                        
+                    </div>
+                    <div class="form-control">
+                        <label>Descripción: <%= product.description %></label>                        
+                    </div>
+                <div class="form-control">
+                    <label>Imagen: <%= product.activity_images[0].name %> </label>                    
+                </div>
+                <div class="form-control">
+                    <label>Dificultad: <%= product.dificulties.name %> </label>                    
+                </div>
+
+                <div class="form-control">
+                    <label>Precio $ <%= product.price %></label>                    
+                </div>
+                
+                <div class="form-control">
+                    <label>Fecha y Hora de INICIO: <%= product.dateStart%> </label>                   
+                </div>
+                <div class="form-control">
+                    <label>Fecha y Hora de FINALIZACION: <%= product.dateFinish%></label>                                       
+                </div>      
+                
+                
+                <div class="caja2">
+                    <button type="submit" class="form-button">Eliminar</button>  
+                </div>
+                </div>
+            </div>
+            </form>
+         </main>
+    </header>
+
+<%- include ('partials/footer') %> 

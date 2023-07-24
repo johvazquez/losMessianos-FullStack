@@ -1,0 +1,37 @@
+<header>
+    <nav class="nav-bar">
+        <a href="/" class="logo-text"><img class="logo-header" src="/images/Logo.png">
+            <h1>Aventyr</h1>
+        </a>
+        <div class="nav-list">
+            <ul>
+                <li class="nav-item"><a href="/" class="nav-link">Inicio</a></li>
+                <li class="nav-item"><a href="/us" class="nav-link">Quienes somos</a></li>
+                <li class="nav-item"><a href="/productsDetail" class="nav-link">Actividades</a></li>
+            </ul>
+        </div>
+        <div class="login-button">
+            <div class="login-button">
+                <% if (locals.session?.role==='admin' ) {%>
+                    <div class="adminList">
+                        <button><a class="user" href="/admin/user"></i>Lista de Usuarios</a></button>
+                        <button><a class="user" href="/admin/listDetail"></i>Listar Productos</a></button>
+                    </div>
+                    <%}%>
+            </div>
+            <% if (!locals.session) { %>
+                <button><a class="user" href="/user/login"><i class="fa-solid fa-user"></i> Ingresar</a></button>
+                <button><a class="Register" href="/user/register">Registrarse</a></button>
+                <% } else { %>
+                    <div class="userLog">
+                        <img class="userImage" src="/images/users/<%= locals.session.avatar %>">
+                        <span class="userName">Bienvenid@ <%= locals.session.name %></span>
+                    </div>
+                        <button><a class="user" href="/user/logout"><i class="fa-solid fa-sign-out"></i> Cerrar
+                                sesión</a></button>
+                    <% } %>
+                        <a class="cart" href="/user/productCart"><i class="fa-solid fa-cart-shopping"></i></a>
+        </div>
+        <div class="menu-toggle"><i class="fa-solid fa-bars"></i></div>
+    </nav>
+</header>

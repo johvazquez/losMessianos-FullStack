@@ -1,0 +1,137 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>   
+        <%- include ('partials/head', {style: 'registerStyles', title: 'Registro'}) %> 
+    </head>
+<body>
+    <%- include ('partials/header') %> 
+    <main>      
+        <form action="/user/register" method="POST" class="register-form" enctype="multipart/form-data" >
+            <div class="caja1">
+            <div class="h2">
+                <h2>Registrarse</h2>
+            </div>
+                    <div class="form-control">
+                    <label>Nombre:</label>                   
+                    <input type="text" name="name" 
+                    class="control <%= locals.errors && errors.name ? "is-invalid" : null %>" 
+                    value="<%= locals.oldData ? oldData.name : null %>"
+                    >
+                    <% if (locals.errors && errors.name) { %>
+                        <div class= "text-danger">
+                      <%= errors.name.msg %>
+                        </div>
+                    <% } %>
+                    <p class="error-message" id="error-name"></p>
+                </div>
+                <div class="form-control">
+                    <label>Apellido:</label>                    
+                    <input type="text" name="surname" 
+                    class="control <%=locals.errors && errors.surname ? "is-invalid" : null %>" 
+                    value="<%= locals.oldData ? oldData.surname : null %>">
+                    <% if (locals.errors && errors.surname) { %>
+                        <div class= "text-danger">
+                     <%= errors.surname.msg %>
+                        </div>
+                    <% } %>
+                    <p class="error-message" id="error-surname"></p>
+                </div>
+                <div class="form-control">
+                    <label>Email:</label>                    
+                    <input 
+                    type="email" 
+                    name="email" 
+                    placeholder="nombre@gmail.com" 
+                    class="control <%= locals.errors && errors.email ? "is-invalid" : null %>"
+                    value="<%= locals.oldData ? oldData.email : null %> ">
+                    <% if (locals.errors && errors.email) { %>
+                        <div class= "text-danger">
+                        <%= errors.email.msg %>
+                        </div>
+                    <% } %>
+                    <p class="error-message" id="error-email"></p>
+                </div>
+                <div class="form-control">
+                    <label>Celular:</label>                    
+                    <input type="tel" name="tel" placeholder="+54 9 11234000"
+                    class="control <%= locals.errors && errors.tel ? "is-invalid" : null %>"
+                    value="<%= locals.oldData ? oldData.tel : null %>">
+                    <% if (locals.errors && errors.tel) { %>
+                        <div class= "text-danger">
+                     <%= errors.tel.msg %>
+                        </div>
+                    <% } %>
+                    <p class="error-message" id="error-tel"></p>
+                </div>
+
+                <div class="form-control">
+                    <label>País</label>                    
+                    <select name="country" class="control <%=locals.errors && errors.country ? "is-invalid" : null %>"
+                    value="<%= locals.oldData ? oldData.country : null %>">
+                    <option value="Argentina">Argentina</option>
+                    <option value="Bolivia">Bolivia</option>
+                    <option value="Peru">Peru</option>
+                    <option value="Brasil">Brasil</option>
+                    <option value="Colombia">Colombia</option>
+                    <option value="Paraguay">Paraguay</option>
+                    <option value="Uruguay">Uruguay</option>
+                    <option value="Chile">Chile</option>
+                    <option value="Venezuela">Venezuela</option>
+                    <option value="Guyana Francesa">Guyana Francesa</option>
+                    </select>
+                    <% if (locals.errors && errors.country) { %>
+                        <div class= "text-danger">
+                     <%= errors.country.msg %>
+                        </div>
+                    <% } %>
+
+                </div>
+                <div class="form-control">
+                    <label for="userAvatar">Imagen de perfil:</label>                    
+                    <input 
+                    type="file" 
+                    name="userAvatar" 
+                    class="control <%= locals.errors && errors.userAvatar ? "is-invalid" : null %>">
+                    <% if (locals.errors && errors.userAvatar) { %>
+                        <div class= "text-danger">
+                     <%= errors.userAvatar.msg %>
+                        </div>
+                    <% } %>
+                    <p class="error-message" id="error-userAvatar"></p>
+                </div>
+                <div class="form-control">
+                    <label>Contraseña:</label>                    
+                    <input 
+                    type="password" 
+                    name="password" 
+                    class="control <%= locals.errors && errors.password ? "is-invalid" : null %>"
+                    value="<%= locals.oldData ? oldData.password : null %>">
+                    <% if (locals.errors && errors.password) { %>
+                        <div class= "text-danger">
+                     <%= errors.password.msg %>
+                        </div>
+                    <% } %>
+                    <p class="error-message" id="error-password"></p>
+                </div>
+                <div class="form-control">
+                    <label>Confirmar Contraseña:</label>                    
+                    <input 
+                    type="password" 
+                    name="repeat_password" 
+                    class="control <%= locals.errors && errors.repeat_password ? "is-invalid" : null %>"
+                    value="<%= locals.oldData ? oldData.repeat_password : null %>">
+                    <% if (locals.errors && errors.repeat_password) { %>
+                        <div class= "text-danger">
+                     <%= errors.repeat_password.msg %>
+                        </div>
+                    <% } %>
+                    <p class="error-message" id="error-repeat_password"></p>
+                </div>
+            <div class="caja2">
+                <button type="submit" class="form-button">Registrarse</button>
+            </main>
+            <%- include('./partials/footer') %>
+            <!-- <script src="./js/registerAddValidation.js"></script> -->
+        </body>                
+    </html>
+

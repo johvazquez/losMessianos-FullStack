@@ -1,0 +1,464 @@
+* {
+    margin: 0px;
+    padding: 0px;
+    box-sizing: border-box;
+  }
+  body {       
+    font-family: "Rubik", sans-serif;    
+    flex-wrap: wrap;
+    flex-direction: column;
+    align-items: stretch;    
+    background-image:linear-gradient(0deg, rgb(255, 255, 255, 0.5), rgb(255, 255, 255,0.5)),url(../images/registro_fondo.jpg); 
+    
+    background-attachment: fixed;
+    background-size:cover ;
+  }    
+  
+  main { 
+       
+    padding: 2%;  
+  }
+ main .who-we-are{   
+    background-image:url(../images/index-background.jpg) ;
+    background-attachment: scroll;
+    background-size:cover ;   
+    width: 100%;       
+    padding: 5%;
+    display: flex;  
+    justify-content: center; 
+  } 
+  main > section .text{
+    margin: 30% 0% 20% 0%;
+  } 
+ main  .resumeText{   
+  padding: 10px 15px;
+  font-size: 20px;
+  text-align: center;
+  color: #fff;   
+}
+main #form-index{ 
+  margin-top: 0%;
+  background: rgba(2, 9, 70, 0.65);
+  font-size: 10px;
+  color: #fff;
+  padding: 10px 15px;
+  line-height: 120%;   
+} 
+div.input-form-index > input{  
+    font-size: 8px;
+    height: 1.5em;
+}
+.button-form-index{
+  text-align: center;
+}
+.input-form-index,.button-form-index{
+  margin-top: 5%;  
+}
+ main .recomendation , .what-are-you-waiting {
+  font-size: 12px;
+  text-align: center;
+  color: white;
+  background: rgba(2, 9, 70, 0.65);
+  padding: 1%;    
+}
+.articles{
+  display: flex;
+  justify-content: space-around;
+  flex-direction: column;  
+  z-index: 100;
+}
+.article{  
+  font-size: 8px;
+  height: 33%;
+  margin-top: 5%;  
+  padding: 2%;
+  width: 100%;
+  box-shadow: 4px 5px 5px 1px grey; 
+  background-color: #fff; 
+}
+.main-article > div {
+  margin-top: 4px;
+  font-size: 90%;
+}
+.main-article > p {
+  margin-top: 4px;
+  font-size: 18px;
+}
+.main-article > h3 {
+  margin-top: 5%;  
+}
+.articles .product-image{   
+  overflow: hidden; 
+  border: #000000 1px solid;
+}
+
+.article >div > img{   
+  height: 100%;
+  width: 100%;  
+}
+.article .price{
+  margin-top: 5%;
+  text-align: center;
+  color: darkslateblue;
+  opacity: 0.9;
+  font-size: 125%;
+}
+.article .discount{
+  text-align: center;  
+  color: darkslateblue;
+  opacity: 0.9;
+}
+.article-button{
+  position: relative;
+  bottom: -3px;
+  height: 40px;
+  background-color: darkslateblue;
+  opacity: 0.9;
+  text-align: center;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border-radius: 1%;
+}
+.article-button > a {
+  color: #fff;
+  text-decoration: none;
+  font-size: 1.8em;
+}
+
+.main-article{
+  margin-top: 2%;
+  font-size: 16px;
+  text-align: center;
+  height: 25%;
+}
+main .slider-section{  
+  background-image: url(../images/arcoiris-background.jpg);
+  background-attachment: scroll;
+  background-size: contain;
+  width: 100%;
+  overflow: hidden; 
+  margin: 3% 0%;   
+}
+main > section .color-slider{  
+  margin: 0% 10%;    
+  overflow: hidden;
+  margin-top: -8%;
+} 
+main .slider-container{
+  height: 100%;
+  width: 100%;
+  display: flex;
+  align-content: center;
+  vertical-align: bottom; 
+  margin-top: 10%;  
+}
+.title-slider{
+  text-align: center;
+  font-size: 1.2rem;
+  background: rgba(2, 9, 70, 0.65);
+  color: white;
+  padding: 1%;
+  margin-top: 20px;
+}
+
+main .slider-contain{
+  width: 50%;
+  height: 50;
+  display: flex;
+  justify-content: space-around;
+  flex-shrink: 0;  
+}
+
+.slider-image{    
+  width: 100%;
+  height: 100%;   
+}
+.carrousel{
+  width: 100%;
+  position: relative;
+  z-index: 1;  
+}
+.carrousel >h2{
+  width: 100%;
+  background: rgba(2, 9, 70, 0.65);
+  font-size: 1.2rem;
+  color: white;
+  font-weight: bold;
+  text-align: center;
+  margin: 3% 0% 1% 0%;
+  height: 30px; 
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.conteCarrousel{
+  width: 100%;  
+  overflow: hidden;
+}
+
+.itemCarrousel{
+  position: relative;
+  width: 100%;
+  height: 100%;
+}
+
+.itemCarrouselTarjeta{
+  width: 100%;
+  height: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-wrap: wrap;  
+}
+.testimonio_caja{
+  width: 300px;
+  box-shadow: 2px 2px 5px rgb(0 0 0);
+  background-color: white;
+  margin: 10px 30px;
+  padding: 20px;
+  cursor: pointer;
+  border-radius: 5px;
+}
+.comentarios_clientes{
+  font-size: 14px;
+  margin-top: 1%;
+}
+.perfil{
+  display: flex;
+  align-items: center;
+}
+.resenias > i{
+  margin-top: 2px;
+  color: darkgoldenrod;
+}
+.resenias .fa-thin{
+  color: lightgrey;  
+}
+.name-user{
+  display: flex;
+  flex-direction: column;
+  margin-left: 10px;
+  font-size: 14px;
+}
+.perfil-img{
+  width: 50px;
+  height: 50px;  
+  border-radius: 50%;
+  overflow: hidden;
+}
+.perfil-img img {
+  width: 100%;
+  height: 100%;
+  object-fit:center;  
+}
+
+.itemCarrouselArrows{   
+  visibility: hidden; 
+  
+}
+
+.itemCarrouselArrows > i:hover {
+  cursor: pointer;
+}
+.conteCarrouselController > a:hover{
+  cursor: pointer;
+}
+main ul{
+  width: 100%;
+  height: 100%;
+  display: flex;
+  justify-content: space-evenly;
+}
+
+.conteCarrouselController{
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  visibility: hidden;
+}
+
+.conteCarrouselController > a{
+  text-decoration: none;
+  font-size: 2em;
+  color: grey;
+}
+
+
+/* --------cellphone------------ */
+@media (min-width:361px){
+   
+  main .recomendation {
+    margin: 5% 0% 0% 0%;
+  }
+  main .what-are-you-waiting {
+    font-size: 12px;
+  }
+  div.input-form-index > input{
+    font-size: 10px ;
+
+  }     
+
+}
+  main .who-we-are{ 
+    height: 80vh;
+  }
+
+  main section .resumeText{
+    font-size: 1.3rem;       
+  }
+  main #form-index{    
+    font-size: 16px;    
+  } 
+  div.input-form-index > input{
+    font-size: 12px;
+    height: 2em;
+  }
+  main .recomendation , .what-are-you-waiting {
+    font-size: 12px;
+  }
+  main .what-are-you-waiting {
+    font-size: 14px;
+  }
+
+/* --------big tablet and laptop------------ */
+@media (min-width:769px){ 
+  main .who-we-are{ 
+    height: 100vh;
+  }
+ 
+   main section .resumeText{
+    font-size: 3em;   
+  }
+  main #form-index{     
+    font-size: 20px;    
+  } 
+  div.input-form-index > input{
+    font-size: 18px;
+    height: 2.2em;
+  }
+
+  main .recomendation , .what-are-you-waiting {
+    font-size: 1.8em;
+  }
+  .articles{
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    flex-direction: row;   
+  }
+  .article {
+    margin-top: 2%;
+    font-size: 8px;
+    padding: 2%;
+    width: 32%;
+    height: 650px; 
+    box-shadow: 4px 5px 5px 1px grey;    
+}
+.article .product-div-image { 
+  border: black solid 1px  ;
+  overflow: hidden; 
+  margin: 0%;
+  height: 300px;
+  background-size: cover;
+  transition: all 0.5s ease;
+  display: flex;
+  align-items: center;  
+}
+.article .product-image{
+  margin: 0%;
+  width: 100%;
+  height: 100%;
+  transition: all 1.5s ease;
+  background-size: cover;  
+} 
+.article-button{    
+  bottom: -110px;
+}
+  .product-image:hover{    
+    overflow: hidden;   
+    transform: scale(1.1); 
+    margin-bottom: 5%;    
+  }
+  main .what-are-you-waiting {
+    font-size: 1em;
+    margin-top: 1%;;
+  }  
+  .conteCarrousel{
+    display: flex;
+    width: 100%;
+    height: 200px;
+    overflow: hidden;
+    scroll-behavior: smooth;
+  } 
+  .itemCarrouselTarjeta{    
+    flex-wrap: nowrap;  
+  }
+  .testimonio_caja{   
+    margin: 10px;
+    padding: 20px;
+    height: 90%;    
+  }
+  #itemCarrousel-1,#itemCarrousel-2,#itemCarrousel-3{
+    background-color: rgba(2, 9, 70, 0.65);
+    height: 100%;    
+  }
+  .itemCarrouselArrows {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    position: relative;
+    margin: 0%;
+    z-index: 0;
+    top: 115px;
+    height: 29%;    
+    width: 100%;
+    visibility: visible;
+    cursor: pointer;
+}
+.itemCarrouselArrows .prev{
+  position: relative;
+  left: -11px;
+  color: white;
+  opacity: 0.74;
+  font-size: 20px;  
+  background-color: #364c59;
+}
+.itemCarrouselArrows .next{
+  position: relative;
+  left: 11px;
+  color: white;
+  opacity: 0.74;
+  font-size: 20px;
+  background-color: #364c59;
+}
+.itemCarrouselArrows :active {
+  color: cornflowerblue;
+}
+.conteCarrouselController{  
+  visibility:visible;
+}
+.conteCarrouselController > a:active{
+  color: cornflowerblue;
+  
+}
+
+ /*.comentarios_clientes{    
+    overflow-y:scroll;
+  }
+  .comentarios_clientes::-webkit-scrollbar{    
+    width: 10px;    
+  }
+  .comentarios_clientes::-webkit-scrollbar-track{ 
+    background: #ba1a1a;
+    border-radius: 20px;
+      
+  }
+  
+  .comentarios_clientes::-webkit-scrollbar-thumb:hover{
+    background:darkslateblue ;
+  }*/
+
+ 
+}
+

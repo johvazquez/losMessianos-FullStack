@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>   
+        <%- include ('partials/head', {style: 'usersStyles', title: 'Lista de usuarios'}) %> 
+        <!-- <meta name="viewport" content="width=device-width, initial-scale=1"/> -->
+    </head>
+    <body>
+        <%- include ('partials/header') %> 
+        <main class="mainTable">
+            <div class="principal-container">
+            <h3> LISTA DE USUARIOS </h3>   
+            <table class="userTable">
+                <thead class="userHead">
+                    <th class="userCells"> Nombre </th>
+                    <th class="userCells"> Apellido </th>
+                    <th class="userCells"> Email </th>
+                    <th class="userCells"> Celular </th>
+                    <th class="userCells"> Pais </th>
+                    <th class="userCells"> Avatar </th>
+                    <th class="userCells"> Tipo de usuario </th>
+                    <th class="userCells"> Acción </th>
+                </thead>
+                <tbody>
+                    <% users.forEach(user => { %>
+                       <tr class="trRow">
+                        <td data-titulo="Nombre" class="userFields"><%= user.name %></td>
+                        <td data-titulo="Apellido" class="userFields"><%= user.surname %></td>
+                        <td data-titulo="Email" class="userFields"><%= user.email %></td>
+                        <td data-titulo="Telefono" class="userFields"><%= user.tel %></td>
+                        <td data-titulo="Pais" class="userFields"><%= user.countries?.name %></td>
+                        <td data-titulo="Foto de Perfil" class="userFields"><img src="/images/users/<%= user.avatar %>" height="50px"></td>
+                        <td data-titulo="Rol" class="userFields"><%= user.roles?.name || 'No tiene rol' %></td>
+                        <% if(user.id !==1){ %>
+                        <td data-titulo="Accion"class="userFields userFieldsCenter"><a href="/admin/<%=user.id%>"> Eliminar </a></td>
+                        <% }%>
+                        </tr> 
+                    <% }); %>
+                </tbody>
+            </table>
+        </div>
+        </main>
+        <%- include ('partials/footer') %> 
+    </body>
+</html>    
